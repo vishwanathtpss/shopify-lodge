@@ -1,0 +1,141 @@
+<div class="hero_area">
+    <section class=" slider_section position-relative">
+      <div class="design-box">
+        <img src="https://cdn.shopify.com/s/files/1/0566/2477/5249/files/design-1.png?v=1669211956" alt="">
+      </div>
+      <div class="slider_number-container d-none d-md-block">
+        <div class="number-box">
+          <span>
+            01
+          </span>
+          <hr>
+          <span class="jwel">
+            J <br>
+            e <br>
+            w <br>
+            e <br>
+            l <br>
+            l <br>
+            e <br>
+            r <br>
+            y
+          </span>
+          <hr>
+          <span>
+            02
+          </span>
+        </div>
+      </div>
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+          </ol>
+          
+          <div class="carousel-inner">
+             {% for block in section.blocks  %}
+            <div class="carousel-item {% if forloop.first %} active {% endif %}">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail_box">
+                      {% if block.settings.header_id != blank %} 
+                  <h2>
+                    <span>{{ block.settings.header_id }}</span>
+                    <hr>
+                  </h2>
+                 {% endif %}
+                    {% if block.settings.header_id_second != blank %}
+                  <h1>
+                   {{ block.settings.header_id_second }}
+                  </h1>
+               {% endif %}
+                   {% if block.settings.textarea_id != blank %}
+                  <p>
+                  {{ block.settings.textarea_id }}
+                  </p>
+               {% endif %}
+                    <div>
+                      <a href="{{ routes.collections_url}}">Shop Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    {% if block.settings.image_picker_id != blank %}
+                  <img src="{{ block.settings.image_picker_id | image_url: width: 1000 }}" alt="">
+                {% endif %}
+                  </div>
+                </div>
+              </div>        
+            </div>
+        
+         {% endfor %}   
+          </div>
+             
+        </div>
+      </div>
+
+    </section>
+     </div>
+     {% schema %}
+        {
+    "name": "image slide",
+    "settings": [],
+     "blocks":[
+    {
+    "type":"image_slide",
+    "name":"image_slider",
+    "limit":3,
+     "settings":[
+        {
+      "type":"text",
+      "id":"header_id",
+        "default": "New Collection",
+        "label": "collection heading"
+        },
+        {
+      "type":"text",
+      "id":"header_id_second",
+        "default": " Jewellery",
+        "label": " Jewellery heading"
+        },
+        {
+      "type":"textarea",
+      "id":"textarea_id",
+        "default": "write about Jewellery",
+        "label": " Jewellery paragraph"
+        },
+       {
+      "type":"image_picker",
+      "id":"image_picker_id",
+       "label":"choose image for slider"
+       }
+  ]
+  }     
+ ],
+          "presets": [
+    {
+      "name": "image slide",
+       "blocks":[
+       {
+       "type":"image_slide"  
+       }
+       ]
+    }
+  ]
+        }    
+
+{% endschema %}
+
+{% javascript %}
+  
+  $.noConflict();
+  $(document).ready(function(){
+  $('#carouselExampleIndicators').carousel({
+  interval: 3000,
+  cycle: true
+});
+});    
+{% endjavascript %}

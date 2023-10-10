@@ -1,0 +1,106 @@
+
+       <div class="item_section layout_padding2">
+    <div class="container">
+      {% if template == 'index' %}
+      <div class="item_container">
+      {%- for collection in section.settings.collection_list -%}
+   <a href="{{ product.url | within: collection }}">
+  <div class="box">
+          <div class="price">
+            
+            <h6>
+             
+            {{ collection.title }}
+            </h6>
+            
+          </div>
+          <div class="img-box">
+
+              {% if collection.image %}
+                <img src="{{ collection.image | image_url: width: 500, height: 450 | image_tag: collection.image.alt }}">
+              {% else %}
+               {% assign alt = collection.title | escape %}
+             <img src="{{ collection.products.first.image | image_url: width: 500, height: 450 | image_tag: alt }}">
+              {% endif %}
+          </div>
+          <div class="name">
+            <h5>
+             {{ collection.title }}
+            </h5>
+          </div>
+        </div>
+      
+     </a>
+    
+      {%- endfor -%}
+              
+      </div>
+    {% elsif collection.handle =='jewellery' %}
+     {% endif %}   
+    </div>
+  </div>
+  <div class="item_section layout_padding2">
+    <div class="container">
+        
+      {% if collection.handle =='jewellery' %}
+      <div class="item_container">
+      {%- for collection in section.settings.collection_list -%}
+   <a href="{{ product.url | within: collection }}">
+  <div class="box">
+          <div class="price">
+            
+            <h6>
+             
+            {{ collection.title }}
+            </h6>
+            
+          </div>
+          <div class="img-box">
+
+              {% if collection.image %}
+                <img src="{{ collection.image | image_url: width: 500, height: 450 | image_tag: collection.image.alt }}">
+              {% else %}
+               {% assign alt = collection.title | escape %}
+             <img src="{{ collection.products.first.image | image_url: width: 500, height: 450 | image_tag: alt }}">
+              {% endif %}
+          </div>
+          <div class="name">
+            <h5>
+             {{ collection.title }}
+            </h5>
+          </div>
+        </div>
+      
+     </a>
+    
+      {%- endfor -%}
+              
+      </div>
+       
+    {% elsif  template == 'index' %}
+     {% endif %}   
+    </div>
+  </div>
+
+  
+
+{% schema %}
+  {
+    "name": "Best Jewellery",
+    "settings": [
+     {
+  "type": "collection_list",
+  "id": "collection_list",
+  "label": "Collections",
+  "limit": 3
+}
+    ],
+     "presets": [
+    {
+      "name": "Best Jewellery"
+    }
+  ]
+    
+  }
+{% endschema %}
+

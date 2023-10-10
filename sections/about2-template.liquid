@@ -1,0 +1,70 @@
+<section class="about_section layout_padding2-top layout_padding-bottom">
+  <div class="design-box">
+    {% if section.settings.image_picker_one_id != blank %}
+      <img src="{{ section.settings.image_picker_one_id | image_url: width: 1000 }}" alt="">
+    {% endif %}
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            {% if section.settings.header_id != blank %}
+              <h2>
+                {{ section.settings.header_id }}
+              </h2>
+            {% endif %}
+          </div>
+          {% if section.settings.paragraph_id != blank %}
+            <p>
+              {{ section.settings.paragraph_id }}
+            </p>
+          {% endif %}
+          <div>
+            <a href="/pages/read-more"> Read More </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-box">
+          {% if section.settings.image_picker_two_id != blank %}
+            <img src="{{ section.settings.image_picker_two_id | image_url: width: 1000 }}" alt="">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About section",
+  "settings": [
+    {
+    "type":"image_picker",
+   "id":"image_picker_one_id",
+   "label":"Product Image"
+    },
+    {
+    "type":"image_picker",
+   "id":"image_picker_two_id",
+   "label":"side Image"
+    },
+     {
+        "type":"text",
+        "id":"header_id",
+        "label": "About Jewellery Shop"
+      },
+    {
+        "type":"textarea",
+        "id":"paragraph_id",
+        "label": "About Jewellery"
+      }
+  ],
+  "presets":[
+    {
+      "name":"Abouts section"
+    }
+  ]
+}
+{% endschema %}

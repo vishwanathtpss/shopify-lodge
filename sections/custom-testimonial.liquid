@@ -1,0 +1,106 @@
+
+<section class="client_section">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Testimonial
+        </h2>
+      </div>
+      <h4 class="secondary_heading">
+        What is says our customer
+      </h4>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+           {% for block in section.blocks  %}
+          <div class="carousel-item {% if forloop.first %} active {% endif %}">
+            <div class="client_container">
+              <div class="client-id">
+                <div class="img-box">
+                    {% if block.settings.image_picker_id != blank %}
+                  <img src="{{ block.settings.image_picker_id | image_url: width: 1000 }}" alt="">
+                {% endif %}
+                </div>
+                <div class="name">
+                  {% if block.settings.header_id != blank %} 
+                  <h5>
+                  {{ block.settings.header_id }}
+                  </h5>
+                    {% endif %}
+                  {% if block.settings.header_id_two != blank %}
+                  <h6>
+                    {{ block.settings.header_id_two }}
+                  </h6>
+                  {% endif %}  
+                </div>
+              </div>
+              <div class="detail-box">
+               {% if block.settings.textarea_id != blank %}
+                  <p>
+                  {{ block.settings.textarea_id }}
+                  </p>
+               {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+          
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+{% schema %}
+  {
+    "name":"Testimonial",
+    "settings":[],
+    "blocks":[
+      {
+        "type":"Testimonial",
+        "name":"Testimonial",
+        "limit":3,
+    "settings": [
+      {
+       "type":"text",
+       "id":"header_id",
+       "label": "Customer Name"
+        },
+       {
+      "type":"image_picker",
+     "id":"image_picker_id",
+     "label":"Customer Image"
+      },
+      {
+        "type":"text",
+        "id":"header_id_two",
+        "label": "Customer Address"
+        },
+      {
+        "type":"textarea",
+        "id":"textarea_id",
+        "label": "Write Customer Views"
+        }
+    ]
+   }
+    ],
+    "presets": [
+    {
+      "name": "Testimonial",
+       "blocks":[
+       {
+       "type":"Testimonial"  
+       }
+       ]
+    }
+  ]
+  }
+{% endschema %}
+

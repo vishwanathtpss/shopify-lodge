@@ -1,0 +1,75 @@
+
+ <section class="price_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+         {% if section.settings.header_id_one != blank %}
+            <h2>
+           {{ section.settings.header_id_one }}
+           </h2>
+          {% endif %}
+      </div>
+      <div class="price_container">
+      
+        {% if section.settings.product_list != blank %}
+        {%- for product in section.settings.product_list -%}
+         
+        <div class="box">
+          <div class="name">
+              <h6>
+                 {{product.title}}
+              </h> 
+          </div>
+          <div class="img-box">
+           {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+          </div>  
+          <div class="detail-box">
+            <h5>
+              ${{ product.price }}
+            </h5>
+             <a href="{{ product.url }}"> Buy Now</a>
+          </div> 
+        <form method="post" action="/cart/add">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  <input type="submit" value="Add to cart" class="btn" />
+</form>  
+   </div>
+       {% endfor %}
+      {% endif %}
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="{{ product.url }}" class="price_btn">
+          See More
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+{% schema %}
+  {
+    "name": "product selector",
+    "settings": [
+      {
+     "type": "product_list",
+     "id": "product_list",
+     "label": "Products",
+     "limit": 3
+     },
+      {
+      "type":"text",
+      "id":"header_id",
+     "label": " Diamond Ring"
+      },
+      {
+      "type":"text",
+      "id":"header_id_one",
+     "label": "Our Jewellery Price"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Product Selector"
+      }
+    ]
+  }
+{% endschema %}

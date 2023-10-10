@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "3fe2f92f-2d39-4949-b8c6-3cbb7fbe06cd": {
+      "type": "best-price-section",
+      "settings": {
+        "collection_list": [
+          "bracelet",
+          "jewellery",
+          "earings"
+        ]
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c6fed761-9b9f-4273-9045-0e674558c8c7": {
+      "type": "custom-product-selector",
+      "disabled": true,
+      "settings": {
+        "product_list": [
+          "diamond-ring",
+          "diamond-ring-1",
+          "diamond-ring-2"
+        ],
+        "header_id": "",
+        "header_id_one": ""
+      }
+    }
+  },
+  "order": [
+    "3fe2f92f-2d39-4949-b8c6-3cbb7fbe06cd",
+    "banner",
+    "product-grid",
+    "c6fed761-9b9f-4273-9045-0e674558c8c7"
+  ]
+}

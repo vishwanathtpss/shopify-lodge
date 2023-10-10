@@ -1,0 +1,135 @@
+{
+  "sections": {
+    "d2f0a33d-946a-419f-b579-fec55ac4f6de": {
+      "type": "newsLetter-popup",
+      "settings": {
+        "show_popup": true
+      }
+    },
+    "2eaa0e7d-3ce8-4142-bc83-bbe858b246de": {
+      "type": "image-slide",
+      "blocks": {
+        "5abe4b40-8541-4143-ba8c-8cb51f6be1bc": {
+          "type": "image_slide",
+          "settings": {
+            "header_id": "New Collection",
+            "header_id_second": "Jewellery",
+            "textarea_id": "Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia aptent taciti sociosqu ad litora torquent per conubia nostra",
+            "image_picker_id": "shopify:\/\/shop_images\/slider-img.png"
+          }
+        },
+        "aa0528f8-b8cd-41ac-9f8b-015d762d0df5": {
+          "type": "image_slide",
+          "settings": {
+            "header_id": "New Collection",
+            "header_id_second": "Jewellery",
+            "textarea_id": "Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia aptent taciti sociosqu ad litora torquent per conubia nostra",
+            "image_picker_id": "shopify:\/\/shop_images\/slider-img.png"
+          }
+        },
+        "b1a21069-e405-4b3c-84bb-15e66b528dc3": {
+          "type": "image_slide",
+          "settings": {
+            "header_id": "New Collection",
+            "header_id_second": "Jewellery",
+            "textarea_id": "Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia aptent taciti sociosqu ad litora torquent per conubia nostra",
+            "image_picker_id": "shopify:\/\/shop_images\/slider-img.png"
+          }
+        }
+      },
+      "block_order": [
+        "5abe4b40-8541-4143-ba8c-8cb51f6be1bc",
+        "aa0528f8-b8cd-41ac-9f8b-015d762d0df5",
+        "b1a21069-e405-4b3c-84bb-15e66b528dc3"
+      ],
+      "settings": {}
+    },
+    "6ba655a0-ba8e-4835-a92d-ee205d1af16f": {
+      "type": "best-price-section",
+      "settings": {
+        "collection_list": [
+          "bracelet",
+          "jewellery",
+          "earings"
+        ]
+      }
+    },
+    "262bef67-0e36-408a-9ad1-888e5954251f": {
+      "type": "about2-template",
+      "settings": {
+        "image_picker_one_id": "shopify:\/\/shop_images\/design-2.png",
+        "image_picker_two_id": "shopify:\/\/shop_images\/about-img.png",
+        "header_id": "About Jewellery Shop",
+        "paragraph_id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+      }
+    },
+    "70476f6c-4a4a-4fd1-84b3-46be4b2dc3e0": {
+      "type": "custom-product-selector",
+      "settings": {
+        "product_list": [
+          "diamond-ring-1",
+          "diamond-ring-2",
+          "diamond-ring-3"
+        ],
+        "header_id": "Diamond Ring",
+        "header_id_one": "Our Jewellery Price"
+      }
+    },
+    "1e50afdc-8dc1-4da0-b7fb-8e4408c1b2aa": {
+      "type": "SPECIAL-Wedding-Ring-custom",
+      "settings": {
+        "header_id": "SPECIAL Wedding Ring",
+        "image_picker_one_id": "shopify:\/\/shop_images\/design-1.png",
+        "image_picker_two_id": "shopify:\/\/shop_images\/ring-img.jpg",
+        "paragraph_id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+      }
+    },
+    "2d724632-380d-4787-9e32-cb8732e86a65": {
+      "type": "custom-testimonial",
+      "blocks": {
+        "template--14787787128913__2d724632-380d-4787-9e32-cb8732e86a65-1669400474b30af97e-0": {
+          "type": "Testimonial",
+          "settings": {
+            "header_id": "Aliqua",
+            "image_picker_id": "shopify:\/\/shop_images\/client.png",
+            "header_id_two": "Mohali sector 74 , Phase 8B",
+            "textarea_id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum"
+          }
+        },
+        "fe5748c0-69d3-494e-b000-bbf5949c5bc1": {
+          "type": "Testimonial",
+          "settings": {
+            "header_id": "Aliqua",
+            "image_picker_id": "shopify:\/\/shop_images\/client.png",
+            "header_id_two": "Mohali sector 74 , Phase 8B",
+            "textarea_id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum"
+          }
+        },
+        "cebc9a05-205d-4476-8a18-dca20517627e": {
+          "type": "Testimonial",
+          "settings": {
+            "header_id": "Aliqua",
+            "image_picker_id": "shopify:\/\/shop_images\/client.png",
+            "header_id_two": "Mohali sector 74 , Phase 8B",
+            "textarea_id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum"
+          }
+        }
+      },
+      "block_order": [
+        "template--14787787128913__2d724632-380d-4787-9e32-cb8732e86a65-1669400474b30af97e-0",
+        "fe5748c0-69d3-494e-b000-bbf5949c5bc1",
+        "cebc9a05-205d-4476-8a18-dca20517627e"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "d2f0a33d-946a-419f-b579-fec55ac4f6de",
+    "2eaa0e7d-3ce8-4142-bc83-bbe858b246de",
+    "6ba655a0-ba8e-4835-a92d-ee205d1af16f",
+    "262bef67-0e36-408a-9ad1-888e5954251f",
+    "70476f6c-4a4a-4fd1-84b3-46be4b2dc3e0",
+    "1e50afdc-8dc1-4da0-b7fb-8e4408c1b2aa",
+    "2d724632-380d-4787-9e32-cb8732e86a65"
+  ]
+}
